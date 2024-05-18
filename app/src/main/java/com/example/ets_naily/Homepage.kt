@@ -141,14 +141,12 @@ fun Homepage(navController: NavController){
                         }
 
                         TextField(
-                            value = selectedDate?.let { dateFormatter.format(it) } ?: "",
-                            onValueChange = {},
+                            value = tanggal,
+                            onValueChange = { tanggal = it},
                             label = { Text("Tanggal Perjalanan") },
-                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
                             modifier = Modifier
                                 .padding(16.dp)
                                 .fillMaxWidth()
-                                .clickable { isDatePickerVisible = true }
                         )
 
                         ElevatedButton(
